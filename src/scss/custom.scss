@@ -1,10 +1,17 @@
 
 
 $theme-colors: (
-    "primary": black,
-    "danger": teal
+    "primary": #3AAFA9,
+    "secondary": #DEF2F1,
+    "danger": #9B1D20,
+    "light": #FEFFFF,
+    "dark": #17252A
 );
 
+$white: #FEFFFF;
+$black: #17252A;
+$gray-500: #2B7A78;
+$gray-700: #205a58;
 
 // import bootstrap
 @import 'bootstrap/scss/bootstrap';

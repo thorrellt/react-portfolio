@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Alert >This is a Alert</Alert>
-      <Button variant="primary">Test Button</Button>
+      <Button className="red ">Test Button</Button>
       
     </div>
   )
