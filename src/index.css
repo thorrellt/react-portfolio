@@ -58,3 +58,7 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.btn, nav{
+  font-family: 'IBM Plex Sans', sans-serif;
+}

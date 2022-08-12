@@ -10,7 +10,9 @@ function App() {
 
   return (
     <div className="App">
-      <Alert >This is a Alert</Alert>
+      <h1>This is a Heading</h1>
+      <p>this is regular text</p>
+      <h1 className='display-1'>this is Display</h1>
       <Button className="red ">Test Button</Button>
       
     </div>
