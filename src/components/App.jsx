@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import MyNav from './MyNav'
+import MainNav from './MainNav'
 import '../styles/App.css'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <MyNav />
+      <MainNav />
       <h1>This is a Heading</h1>
       <p>this is regular text</p>
       <h1 className='display-1'>this is Display</h1>
