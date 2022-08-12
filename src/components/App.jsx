@@ -1,16 +1,17 @@
 import { useState } from 'react'
-import './App.css'
+import '../styles/App.css'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import '../scss/custom.scss'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <Alert >This is a Button</Alert>
-      <Button>Test Button</Button>
+      <Alert >This is a Alert</Alert>
+      <Button variant="primary">Test Button</Button>
       
     </div>
   )
