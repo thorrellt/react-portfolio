@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Montserrat:wght@700;800;900&display=swap");
 
 
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_mixins";
+
 $font-family-base: "IBM Plex Mono", monospace;
 $headings-font-family: 'Montserrat', sans-serif;
 
@@ -17,11 +21,19 @@ $theme-colors: (
     "dark": #17252A
 );
 
+$custom-theme-colors: (
+  "primary-transparent": rgb(58, 175, 169, 0.7)
+);
+
 
 $white: #FEFFFF;
 $black: #17252A;
 $gray-600: #2B7A78;
 $gray-800: #205a58;
+
+// merge the maps to add new theme colors
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
 // import bootstrap
 @import 'bootstrap/scss/bootstrap';

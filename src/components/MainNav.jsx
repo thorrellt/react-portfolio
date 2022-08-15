@@ -7,7 +7,7 @@ import '../styles/MainNav.css'
 
 function MainNav() {
     return (
-        <Navbar collapseOnSelect expand="lg" id="MainNav" fixed="top" bg="primary" variant="dark">
+        <Navbar collapseOnSelect expand="lg" id="MainNav" fixed="top" bg="primary-transparent" variant="dark">
             <Container className="pe-3">
             <Navbar.Brand href="#"></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
