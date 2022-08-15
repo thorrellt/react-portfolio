@@ -14,10 +14,10 @@ function MainNav(){
                 className="mainNav--link me-1">About Me</Nav.Link>
                 <Nav.Link 
                 href="#" 
-                className="mx-1">Projects</Nav.Link>
+                className="mx-4">Projects</Nav.Link>
                 <Nav.Link 
                 href="#"
-                className="ms-1 pe-0">Contact Me</Nav.Link>
+                className="ms-1">Contact Me</Nav.Link>
             </Nav>
             </Container>
         </Navbar>

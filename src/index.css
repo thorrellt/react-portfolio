@@ -5,15 +5,16 @@
 a.nav-link {
   font-size: 1.5rem;
   font-weight: 700;
+  position: relative;
 }
 
 
-/* .nav-link:after {
+.nav-link:after {
   content: "";
-  /* position: absolute; */
+  position: absolute;
   height: 2px;
   background-color: white;
-  width: 50%;
+  width: 0%;
   left: 50%;
   margin-top: 1rem;
   bottom: 0;
@@ -29,12 +30,12 @@ a.nav-link {
 }
 
 .nav-link:hover:after {
-  width: 100%;
+  width: 90%;
 }
 .nav-link:focus:after {
   text-decoration: none;
-  width: 100%;
-} */
+  width: 90%;
+}
 
 /* .navbar ul .nav-item:after {
   content: '';
