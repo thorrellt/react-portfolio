@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import MainNav from './MainNav'
+import Heading from './Heading'
 import '../styles/App.css'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
@@ -12,10 +13,7 @@ function App() {
   return (
     <div className="App">
       <MainNav />
-      <h1>This is a Heading</h1>
-      <p>this is regular text</p>
-      <h1 className='display-1'>this is Display</h1>
-      <Button className="red ">Test Button</Button>
+      <Heading />
       
     </div>
   )
