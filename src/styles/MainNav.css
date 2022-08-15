@@ -1,6 +1,7 @@
 #MainNav{
-  width: 48%;
+  width: auto;
   left: auto;
+  --bs-bg-opacity: .7;
 }
 
 .navbar-brand{

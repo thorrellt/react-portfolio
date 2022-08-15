@@ -9,9 +9,9 @@ function MainNav() {
     const expand = "lg"
     return (
 
-        <Navbar collapseOnSelect expand="lg" id="MainNav" fixed="top" bg="primary-transparent" variant="dark">
+        <Navbar collapseOnSelect expand="lg" id="MainNav" fixed="top" bg="primary" variant="dark">
             <Container className="pe-3">
-                <Navbar.Brand href="#"></Navbar.Brand>
+                
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Offcanvas
                     id={`offcanvasNavbar-expand-${expand}`}

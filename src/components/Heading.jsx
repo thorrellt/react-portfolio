@@ -10,7 +10,7 @@ function Heading() {
         <Container fluid>
           <Row>
             <div id="heading--left" className="col-6 bg-secondary">1 of 2</div>
-            <div id="heading--right" className="col-6 bg-primary">2 of 2</div>
+            <div id="heading--right" className="col-6 bg-primary">hello world</div>
           </Row>
         </Container>
       );
