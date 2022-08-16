@@ -21,6 +21,17 @@ $theme-colors: (
     "dark": #17252A
 );
 
+$position-values: (
+  0: 0,
+  40: 40%,
+  45: 45%,
+  100: 100%
+);
+
+$custom-theme-colors: (
+  "primary-transparent": rgb(58, 175, 169, 0.7)
+);
+
 
 $white: #FEFFFF;
 $black: #17252A;
