@@ -34,7 +34,23 @@
 
     font-size: 1rem;
     border-radius: 50em;
-    font-weight: 600;    
+    font-weight: 600;
     letter-spacing: .25rem;
 
+}
+
+#main-contacts .col {
+    display: flex;
+    flex: 0 1 33%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#main-contacts img {
+    display: flex;
+    flex-grow: 1;
+    width: 2.25rem;
+    align-self: center;
 }
