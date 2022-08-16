@@ -17,6 +17,7 @@ function Heading() {
         <div id="heading--right" className="col-6 bg-primary">
           <Image
             className="profile-pic ms-5 me-5"
+            id='profile-pic'
             src={[profilePicture]}
             fluid
             alt="Thorrell T Profile Pic"
@@ -32,6 +33,7 @@ function Heading() {
 
         <Button variant="danger" size="lg" 
         className='px-3 py-3'
+        id="cv-btn"
         href={resume}
         download="ThorrellT_Resume">
           <strong>DOWNLOAD CV</strong>

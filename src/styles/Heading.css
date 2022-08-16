@@ -22,24 +22,19 @@
 }
 
 
-.profile-pic {
+#profile-pic {
     height: 90vh;
-    // align-self: flex-end;
     filter: drop-shadow(7px 7px 7px #2B7A78);
     position: absolute;
     bottom: 0;
     z-index: 0;
 }
 
-.btn {
+#cv-btn {
 
     font-size: 1rem;
     border-radius: 50em;
-    font-weight: 600;
-    // height: fit-content;
-    // width: max-content;
+    font-weight: 600;    
     letter-spacing: .25rem;
-    // margin-block: 2rem;
-    // padding-block: 1rem;
-    // padding-inline: 1.5rem;
+
 }
