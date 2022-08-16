@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Image from 'react-bootstrap/Image'
-import '../scss/Heading.scss'
+import '../styles/Heading.css'
 import profilePicture from '../assets/img-profile-picture.png'
 import resume from '../assets/thorrellt_resume.pdf'
 
@@ -25,7 +25,7 @@ function Heading() {
       </Row>
       <div className="intro position-absolute top-45 start-45 my-0 translate-middle">
         <p>hello world, I'm</p>
-        <h1 className='display-4'>Thorrell <span class="text-danger">T</span>urner</h1>
+        <h1 className='display-4'>Thorrell <span className="text-danger">T</span>urner</h1>
         <p>a Software Developer based<br/>
           out of the Washington<br/>
           Metropolitan area</p>
