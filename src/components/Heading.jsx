@@ -13,8 +13,21 @@ import emailIcon from '../assets/icon-mail.svg'
 import resume from '../assets/thorrellt_resume.pdf'
 
 function Heading(props) {
-  console.log(props.windowWidth)
-  const contactsPosition = props.windowWidth <= 575 ? "top-0" : "bottom-0"
+  const windowWidth = props.windowWidth;
+
+  /**
+   * responsive design variables
+   * that change Bootstrap classes that
+   * arent responsive on small screens 
+   */
+  const contactsPosition = windowWidth <= 575 ? "top-0" : "bottom-0"
+  const introPosition = windowWidth <= 575 ? "top-30 start-50" : "top-45 start-45"
+  const profileImgPosition = windowWidth <= 575 ? "bottom-0 end-0" : "bottom-0 end-0"
+
+
+  
+
+
 
   return (
     <Container className=".Heading position-relative" id='Heading' fluid>
@@ -59,9 +72,9 @@ function Heading(props) {
             </Col>
           </Row>
         </div>
-        <div id="heading--right" className="col-12 col-sm-6 bg-primary">
+        <div id="heading--right" className="col-12 col-sm-6 bg-primary position-relative">
           <Image
-            className="profile-pic ms-5 me-5"
+            className={`profile-pic position-absolute ${profileImgPosition}`}
             id='profile-pic'
             src={[profilePicture]}
             fluid
@@ -69,11 +82,11 @@ function Heading(props) {
           />
         </div>
       </Row>
-      <div className="intro position-absolute top-45 start-45 my-0 translate-middle">
+      <div className= {`intro position-absolute ${introPosition} my-0 translate-middle`} >
         <p>hello world, I'm</p>
         <h1 className='display-4'>Thorrell <span className="text-danger">T</span>urner</h1>
-        <p>a Software Developer based<br />
-          out of the Washington<br />
+        <p>a Software Developer based {windowWidth <= 575 ? "":<br />}
+          out of the Washington {windowWidth <= 575 ? "":<br />}
           Metropolitan area</p>
 
         <Button variant="danger" size="lg"
@@ -84,6 +97,11 @@ function Heading(props) {
           <strong>DOWNLOAD CV</strong>
         </Button>
       </div>
+
+      <h1 className='display-1'>More shit</h1>
+      <h1 className='display-1'>More shit</h1>
+      <h1 className='display-1'>More shit</h1>
+      <h1 className='display-1'>More shit</h1>
 
 
     </Container>

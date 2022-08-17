@@ -1,18 +1,17 @@
-
-
-
 #Heading {
     height: 100vh;
+    overflow: hidden;
     /* outline: 2px solid black; */
 }
 
-#Heading > .row {
+#Heading>.row {
     height: 100%;
 }
 
 #heading--left,
 #heading--right {
     height: 100%;
+    max-height: 100vh;
 }
 
 
@@ -30,10 +29,8 @@
 
 
 #profile-pic {
-    height: 90%;
+    max-height: 85%;
     filter: drop-shadow(7px 7px 7px #2B7A78);
-    position: absolute;
-    bottom: 0;
     z-index: 0;
 }
 
@@ -70,7 +67,27 @@
     }
 
     #profile-pic {
-        height: 65%;
+        height: 55vh;
+        max-height: 60vh;
+    }
+
+    .intro {
+        display: flex;
+        flex-direction: column;
+        max-width: 320px;
+        overflow: hidden;
+        /* outline: 2px solid black; */
+    }
+
+    .intro #cv-btn {
+        max-width: 220px;
+    }
+
+    .intro p {
+        /* word-break: break-all; */
+        display: flex;
+        white-space: normal;
+        max-width: 315px;
     }
 
     /* #main-contacts {
