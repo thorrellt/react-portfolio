@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import MainNav from './MainNav'
 import Heading from './Heading'
 import '../styles/App.css'
@@ -8,13 +8,26 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../scss/custom.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    function watchWidth() {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener("resize", watchWidth)
+
+    return function () {
+      window.removeEventListener("resize", watchWidth)
+    }
+  }, [])
+
 
   return (
     <div className="App">
       <MainNav />
-      <Heading />
-      
+      <Heading windowWidth = {windowWidth}/>
+
     </div>
   )
 }

@@ -1,11 +1,18 @@
-.Heading {
+
+
+
+#Heading {
     height: 100vh;
-    outline: 2px solid black;
+    /* outline: 2px solid black; */
+}
+
+#Heading > .row {
+    height: 100%;
 }
 
 #heading--left,
 #heading--right {
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -23,7 +30,7 @@
 
 
 #profile-pic {
-    height: 90vh;
+    height: 90%;
     filter: drop-shadow(7px 7px 7px #2B7A78);
     position: absolute;
     bottom: 0;
@@ -53,4 +60,22 @@
     flex-grow: 1;
     width: 2.25rem;
     align-self: center;
+}
+
+@media all and (max-width: 575px) {
+
+    #heading--left,
+    #heading--right {
+        height: 50vh;
+    }
+
+    #profile-pic {
+        height: 65%;
+    }
+
+    /* #main-contacts {
+        bottom: 100%;
+        top: 0%;
+    } */
+
 }
