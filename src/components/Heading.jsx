@@ -22,7 +22,7 @@ function Heading(props) {
    */
   const contactsPosition = windowWidth <= 575 ? "top-0" : "bottom-0"
   const introPosition = windowWidth <= 575 ? "top-30 start-50" : "top-45 start-45"
-  const profileImgPosition = windowWidth <= 575 ? "bottom-0 end-0" : "bottom-0 end-0"
+  const profileImgPosition = windowWidth <= 575 ? "bottom-0 end-0" : "bottom-0 start-15"
 
 
 
