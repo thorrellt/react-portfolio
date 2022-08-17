@@ -15,6 +15,8 @@
 }
 
 
+
+/** Intro **/
 .intro h1 {
     font-weight: 900;
     line-height: 2rem;
@@ -27,95 +29,25 @@
     width: 30ch;
 }
 
-
-#profile-pic {
-    max-height: 85%;
-    filter: drop-shadow(7px 7px 7px #2B7A78);
-    z-index: 0;
-    animation: fadeIn ease-in 2s;
-    -webkit-animation: fadeIn ease-in 2s;
-    -moz-animation: fadeIn ease-in 2s;
-    -o-animation: fadeIn ease-in 2s;
-    -ms-animation: fadeIn ease-in 2s;
-}
-
-#main-contacts {
-    /* opacity:0; */
-    animation: fadeIn ease-in 4s;
-    -webkit-animation: fadeIn ease-in 4s;
-    -moz-animation: fadeIn ease-in 4s;
-    -o-animation: fadeIn ease-in 4s;
-    -ms-animation: fadeIn ease-in 4s;
-}
-
-/* #main-contacts::before {
-    opacity: 0;
-}
-
-#main-contacts::after {
-    opacity: 1;
-} */
-
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-#cv-btn {
-
+.intro #cv-btn {
     font-size: 1rem;
     border-radius: 50em;
     font-weight: 600;
     letter-spacing: .25rem;
-
 }
 
+
+
+/** Profile Picture **/
+#profile-pic {
+    max-height: 85%;
+    filter: drop-shadow(7px 7px 7px #2B7A78);
+    z-index: 0;
+}
+
+
+
+/** Contacts **/
 #main-contacts .col {
     display: flex;
     flex: 0 1 33%;
@@ -124,7 +56,6 @@
     align-items: center;
 }
 
-
 #main-contacts img {
     display: flex;
     flex-grow: 1;
@@ -132,20 +63,9 @@
     align-self: center;
 }
 
-@keyframes pulse {
-    from {
-        font-size: 7rem;
-    }
 
-    to {
-        font-size: 8rem;
-    }
 
-    /* 100% {
-        font-size: 7rem;
-    } */
-}
-
+/** Arrow **/
 .down-arrow-link {
     display: flex;
     justify-content: center;
@@ -154,15 +74,14 @@
     color: #205a58;
     max-height: 4rem;
     overflow: hidden;
-    animation-name: pulse;
-    animation-duration: .75s;
-    animation-iteration-count: 6;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    animation-delay: 3s;
 }
 
 
+
+
+/**************
+ MEDIA QUERIES
+**************/
 @media all and (max-width: 575px) {
 
     #heading--left,
@@ -193,4 +112,38 @@
         white-space: normal;
         max-width: 315px;
     }
+}
+
+
+
+
+/***********
+ ANIMATIONS
+************/
+@keyframes pulse {
+    from {font-size: 7rem;}
+    to {font-size: 8rem;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+
+    to {opacity: 1;}
+}
+
+.down-arrow-link {
+    animation-name: pulse;
+    animation-duration: .75s;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+}
+
+#profile-pic {
+    animation: fadeIn ease-in 2s;
+}
+
+#main-contacts {
+    animation: fadeIn ease-in 4s;
 }
