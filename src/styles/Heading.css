@@ -32,6 +32,79 @@
     max-height: 85%;
     filter: drop-shadow(7px 7px 7px #2B7A78);
     z-index: 0;
+    animation: fadeIn ease-in 2s;
+    -webkit-animation: fadeIn ease-in 2s;
+    -moz-animation: fadeIn ease-in 2s;
+    -o-animation: fadeIn ease-in 2s;
+    -ms-animation: fadeIn ease-in 2s;
+}
+
+#main-contacts {
+    /* opacity:0; */
+    animation: fadeIn ease-in 4s;
+    -webkit-animation: fadeIn ease-in 4s;
+    -moz-animation: fadeIn ease-in 4s;
+    -o-animation: fadeIn ease-in 4s;
+    -ms-animation: fadeIn ease-in 4s;
+}
+
+/* #main-contacts::before {
+    opacity: 0;
+}
+
+#main-contacts::after {
+    opacity: 1;
+} */
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 #cv-btn {
@@ -58,6 +131,37 @@
     width: 2.25rem;
     align-self: center;
 }
+
+@keyframes pulse {
+    from {
+        font-size: 7rem;
+    }
+
+    to {
+        font-size: 8rem;
+    }
+
+    /* 100% {
+        font-size: 7rem;
+    } */
+}
+
+.down-arrow-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 7rem;
+    color: #205a58;
+    max-height: 4rem;
+    overflow: hidden;
+    animation-name: pulse;
+    animation-duration: .75s;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 3s;
+}
+
 
 @media all and (max-width: 575px) {
 
@@ -89,10 +193,4 @@
         white-space: normal;
         max-width: 315px;
     }
-
-    /* #main-contacts {
-        bottom: 100%;
-        top: 0%;
-    } */
-
 }

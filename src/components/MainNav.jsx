@@ -9,7 +9,7 @@ function MainNav() {
     const expand = "lg"
     return (
 
-        <Navbar collapseOnSelect expand="lg" id="MainNav" fixed="top" bg="primary" variant="dark">
+        <Navbar collapseOnSelect expand={expand} id="MainNav" fixed="top" bg="primary" variant="dark">
             <Container className="pe-3">
                 
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

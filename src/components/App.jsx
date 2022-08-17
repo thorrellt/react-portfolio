@@ -8,8 +8,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../scss/custom.scss'
 
 function App() {
+  /**
+   * wondow width to be passed to components
+   * for responsive design choices
+   * for circumstances where bootstrap
+   * doesnt have built in responsive classes
+   */
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
   useEffect(() => {
     function watchWidth() {
       setWindowWidth(window.innerWidth)

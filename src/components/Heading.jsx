@@ -25,48 +25,48 @@ function Heading(props) {
   const profileImgPosition = windowWidth <= 575 ? "bottom-0 end-0" : "bottom-0 end-0"
 
 
-  
+
 
 
 
   return (
     <Container className=".Heading position-relative" id='Heading' fluid>
       <Row>
-        <div id="heading--left" 
-        className="mx-0 px-0 col-12 col-sm-6 bg-secondary position-relative">
+        <div id="heading--left"
+          className="mx-0 px-0 col-12 col-sm-6 bg-secondary position-relative">
           <Row id="main-contacts"
             className={`bg-primary position-absolute ${contactsPosition} start-0 px-2 py-3`}>
-            
+
             <Col>
-              <a href="https://github.com/thorrellt" className="contact mx-2" 
-              id="gitHub" 
-              target="_blank" 
-              rel="noopener noreferrer">
+              <a href="https://github.com/thorrellt" className="contact mx-2"
+                id="gitHub"
+                target="_blank"
+                rel="noopener noreferrer">
                 <Image
-                  src={githubIcon} 
-                  alt="github" 
+                  src={githubIcon}
+                  alt="github"
                   title="github.com/thorrellt" />
               </a>
             </Col>
 
             <Col>
-              <a href="https://www.linkedin.com/in/thorrellt/" className="contact mx-2" 
-              id="linkedIn" 
-              target="_blank" 
-              rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/thorrellt/" className="contact mx-2"
+                id="linkedIn"
+                target="_blank"
+                rel="noopener noreferrer">
                 <Image
-                  src={linkedinIcon} 
+                  src={linkedinIcon}
                   alt="www.linkedin.com/in/thorrellt" title="linkedin.com/in/thorrellt" />
               </a>
             </Col>
 
             <Col>
-              <a href="mailto:thorrellt@gmail.com" className="contact mx-2" 
-              id="email" target="_blank"
-              rel="noopener noreferrer">
+              <a href="mailto:thorrellt@gmail.com" className="contact mx-2"
+                id="email" target="_blank"
+                rel="noopener noreferrer">
                 <Image className='py-auto'
-                  src={emailIcon} 
-                  alt="thorrellt@gmail.com" 
+                  src={emailIcon}
+                  alt="thorrellt@gmail.com"
                   title="thorrellt@gmail.com" />
               </a>
             </Col>
@@ -82,11 +82,11 @@ function Heading(props) {
           />
         </div>
       </Row>
-      <div className= {`intro position-absolute ${introPosition} my-0 translate-middle`} >
+      <div className={`intro position-absolute ${introPosition} my-0 translate-middle`} >
         <p>hello world, I'm</p>
         <h1 className='display-4'>Thorrell <span className="text-danger">T</span>urner</h1>
-        <p>a Software Developer based {windowWidth <= 575 ? "":<br />}
-          out of the Washington {windowWidth <= 575 ? "":<br />}
+        <p>a Software Developer based {windowWidth <= 575 ? "" : <br />}
+          out of the Washington {windowWidth <= 575 ? "" : <br />}
           Metropolitan area</p>
 
         <Button variant="danger" size="lg"
@@ -98,11 +98,9 @@ function Heading(props) {
         </Button>
       </div>
 
-      <h1 className='display-1'>More shit</h1>
-      <h1 className='display-1'>More shit</h1>
-      <h1 className='display-1'>More shit</h1>
-      <h1 className='display-1'>More shit</h1>
-
+      <a href="#" className='down-arrow-link position-absolute bottom-0 start-50 translate-middle-x'>
+        <i className="down-arrow bi bi-chevron-compact-down"></i>
+      </a>
 
     </Container>
   );
