@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <MainNav />
-      {/* <Heading windowWidth = {windowWidth}/> */}
+      <Heading windowWidth = {windowWidth}/>
       <AboutMe />
     </div>
   )
