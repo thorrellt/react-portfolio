@@ -30,7 +30,7 @@ function Heading(props) {
 
 
   return (
-    <Container className=".Heading position-relative" id='Heading' fluid>
+    <section className="mx-0 container-fluid .Heading position-relative" id='Heading' >
       <Row>
         <div id="heading--left"
           className="mx-0 px-0 col-12 col-sm-6 bg-secondary position-relative">
@@ -83,9 +83,12 @@ function Heading(props) {
         </div>
       </Row>
       <div className={`intro position-absolute ${introPosition} my-0 translate-middle`} >
-        <p className='mb-2'>hello world, I'm</p>
-        <h1 className='display-4'>Thorrell <span className="text-danger">T</span>urner</h1>
-        <p>a Software Developer based {windowWidth <= 575 ? "" : <br />}
+        <p className='mb-2 lh-base fw-bold fs-5'>
+          hello world, I'm</p>
+        <h1 className='display-4'>
+          Thorrell <span className="text-danger">T</span>urner</h1>
+        <p className='lh-base fw-bold fs-5'>
+          a Software Developer based {windowWidth <= 575 ? "" : <br />}
           out of the Washington {windowWidth <= 575 ? "" : <br />}
           Metropolitan area</p>
 
@@ -102,7 +105,7 @@ function Heading(props) {
         <i className="down-arrow bi bi-chevron-compact-down"></i>
       </a>
 
-    </Container>
+    </section>
   );
 }
 
