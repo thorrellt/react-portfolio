@@ -25,7 +25,8 @@
 .intro p {
     font-size: 1.25rem;
     font-weight: bold;
-    line-height: 1.75rem;
+    line-height: 1.5rem;
+    margin-block-end: .75rem;
     width: 30ch;
 }
 
@@ -59,7 +60,7 @@
 #main-contacts img {
     display: flex;
     flex-grow: 1;
-    width: 2.25rem;
+    width: 2.125rem;
     align-self: center;
 }
 

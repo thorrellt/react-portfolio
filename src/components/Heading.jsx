@@ -83,7 +83,7 @@ function Heading(props) {
         </div>
       </Row>
       <div className={`intro position-absolute ${introPosition} my-0 translate-middle`} >
-        <p>hello world, I'm</p>
+        <p className='mb-2'>hello world, I'm</p>
         <h1 className='display-4'>Thorrell <span className="text-danger">T</span>urner</h1>
         <p>a Software Developer based {windowWidth <= 575 ? "" : <br />}
           out of the Washington {windowWidth <= 575 ? "" : <br />}
