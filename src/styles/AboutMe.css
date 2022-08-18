@@ -3,5 +3,9 @@
 }
 
 .skill-icon{
-    font-size: 3rem;
+    font-size: 4rem;
+}
+
+#education #degree {
+    justify-items: center;
 }
