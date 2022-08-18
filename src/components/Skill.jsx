@@ -8,7 +8,7 @@ export default function Skill(props) {
     const {title, className} = props
 
     return (
-        <Col xs={3} className='text-center' alt={`${title} Icon`} title={title} >
+        <Col xs={6} sm={3} className='text-center' alt={`${title} Icon`} title={title} >
             <Row>
                 <i className={`skill-icon text-center ${className}`}></i>
             </Row>

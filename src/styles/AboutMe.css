@@ -1,3 +1,6 @@
+#AboutMe {
+    align-items: center;
+}
 #AboutMe h2 {
     font-weight: 900;
 }
@@ -6,6 +9,7 @@
     font-size: 4rem;
 }
 
-#education #degree {
-    justify-items: center;
+#AboutMe p,
+#AboutMe small {
+    color:#205a58;
 }
