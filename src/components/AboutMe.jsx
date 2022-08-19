@@ -25,19 +25,22 @@ function AboutMe(props) {
                 About Me</h2>
             <Row className='container-lg mx-auto px-0'>
                 <Col xs={12} md={{ span: 5, offset: 1 }} className=''>
-                    <Row className='gy-5 mx-1 mb-3 pe-5'>
+                    <Row id='AboutMe--content' className='gy-5 mx-1 mb-3 pe-5'>
                         <p>
                             I have always excelled at, & enjoyed, being more of a logical problem solver & tinkerer. So, after 15+ years in public relations &amp customer service I decided to pursue a career in Software Development.
                         </p>
                     </Row>
                     <h3 className='fw-bold'>Education</h3>
                     <Row id='education' className='mx-1 mt-2'>
-                        
+
                         <Container className='mb-3'>
-                            <small id="degree-type">B.S.</small>
+
                             <Row xs="auto" className='mt-2'>
-                                <Col id='degree' >
-                                    <h5 id="degree-field" className='lh-1 fs-5'>Computer Science</h5>
+                                <Col xs={12}>
+                                    <small id="degree-type">B.S.</small>
+                                </Col>
+                                <Col id='degree' className='pe-1'>
+                                    <span id="degree-field" className='h5 fs-6'>Computer Science</span>
 
                                 </Col>
                                 <Col className='px-0 lh-1 py-1'>
@@ -49,7 +52,7 @@ function AboutMe(props) {
                     </Row>
                 </Col>
                 <Col xs={12} md={5} id='skills'>
-                    <h3 className='fw-bold pb-2'>Skills</h3>
+                    <h3 className='fw-bold pb-3'>Skills</h3>
                     <Row className='g-3'>
                         {skillElements}
                     </Row>
