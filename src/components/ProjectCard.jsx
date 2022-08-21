@@ -11,9 +11,10 @@ export default function ProjectCard(props) {
      * PROPS
      */
     const {imgName, stackIcons} = props
-    const iconElements = stackIcons.map(iconName => {
+    const iconElements = stackIcons.map((iconName, i) => {
         return (
             <StackIcon
+                key={i}
                 iconName={iconName}
             />
         )

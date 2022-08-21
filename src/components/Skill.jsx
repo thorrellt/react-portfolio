@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 
 export default function Skill(props) {
     const {title, className} = props
+    // console.log(props)
 
     return (
         <Col xs={6} sm={3} className='text-center' alt={`${title} Icon`} title={title} >

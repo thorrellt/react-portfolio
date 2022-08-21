@@ -3,13 +3,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Skill from './Skill'
-import SkillsData from '../data/skillsData'
-
 import '../styles/AboutMe.css'
 import skillsData from '../data/skillsData';
 
 function AboutMe(props) {
+
     const skillElements = skillsData.map((skill, i) => {
+        // console.log(skill)
         return (
             <Skill
                 key={i}
@@ -18,7 +18,7 @@ function AboutMe(props) {
             />
         )
     })
-
+    
     return (
         <section className='container-fluid position-relative' id='AboutMe'>
             <h2 className='mt-5 mb-3 text-center'>
