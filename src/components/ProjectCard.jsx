@@ -14,7 +14,7 @@ export default function ProjectCard(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const { imgName, stackIcons } = props
+    const { imgName, stackIcons, title1, title2, type } = props
 
     //Building Stack Icon Section
     const iconElements = stackIcons.map((icon, i) => {
@@ -54,10 +54,8 @@ export default function ProjectCard(props) {
             <Card onClick={handleShow} className='ProjectCard p-0 mx-auto' style={{ width: '18rem' }}>
                 <Card.Body className='p-0 position-relative'>
                     <div className="project--title position-absolute top-5 start-5 ">
-                        <h3>Care Corner</h3>
-                        <p>
-                            Android Application
-                        </p>
+                        <h3>{`${title1}\n${title2}`}</h3>
+                        <p>{type}</p>
                     </div>
                     <Card.Img variant="top"
                         src={imgPath} />

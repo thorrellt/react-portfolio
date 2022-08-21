@@ -14,6 +14,9 @@ export default function Projects(props) {
                 key = {i}
                 imgName={projCard.imgName}
                 stackIcons={projCard.stackIcons}
+                title1={projCard.title1}
+                title2={projCard.title2}
+                type={projCard.type}
             />
         )
     })

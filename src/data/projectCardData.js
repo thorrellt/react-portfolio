@@ -2,6 +2,9 @@ const ccIcons = ["devicon-android-plain", "devicon-java-plain", "devicon-git-pla
 
 export default [
     {
+        title1: "Care",
+        title2: "Corner",
+        type: "Android Application",
         imgName: 'card-img-cc.jpg',
         stackIcons: [
             {
@@ -23,6 +26,9 @@ export default [
         ]
     },
     {
+        title1: "MC-311",
+        title2: "Notes Tool",
+        type: "Web Application",
         imgName: 'card-img-mc311.jpg',
         stackIcons: [
             {
@@ -44,6 +50,9 @@ export default [
         ]
     },
     {
+        title1: "Order",
+        title2: "Management API",
+        type: "REST API",
         imgName: 'card-img-api.jpg',
         stackIcons: [
             {

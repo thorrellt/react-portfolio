@@ -22,6 +22,7 @@
 #Projects .ProjectCard .project--title {
     color: var(--neutral-white);
     --bs-bg-opacity: .4;
+    white-space: pre-line;
 }
 
 #Projects .ProjectCard .portfolio-icons {
