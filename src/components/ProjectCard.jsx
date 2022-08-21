@@ -28,10 +28,10 @@ export default function ProjectCard(props) {
                 <Card.Body className='p-0 position-relative'>
                     <Card.Img variant="top"
                         src={imgPath} />
-                    <div class="data">
+                    <div class="data position-absolute bg-white">
                         <div class="content">
                             <Card.Title
-                                className='ms-3'>Card Title</Card.Title>
+                                className='ms-3 mt-3'>Card Title</Card.Title>
                             <Card.Subtitle
                                 className="mb-3 text-muted ms-3">Card Subtitle</Card.Subtitle>
                             <Row

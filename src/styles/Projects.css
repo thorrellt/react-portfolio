@@ -10,6 +10,18 @@
     filter: drop-shadow(7px 7px 7px var(--gray-800));
 }
 
-#Projects .ProjectCard .portfolio-icons {
-    
+#Projects .ProjectCard .data {
+    bottom: 0;
+    width: 100%;
+    transform: translateY(calc(50px + 1em));
+    transition: transform 0.3s;
+}
+
+#Projects .ProjectCard .content {
+    position: relative;
+    z-index: 1;
+}
+
+#Projects .ProjectCard:hover .data {
+    transform: translateY(0);
 }
