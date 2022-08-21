@@ -13,8 +13,17 @@
 #Projects .ProjectCard .data {
     bottom: 0;
     width: 100%;
-    transform: translateY(calc(50px + 1em));
+    transform: translateY(calc(20px + 1em));
     transition: transform 0.3s;
+    --bs-bg-opacity: .4;
+}
+
+#Projects .ProjectCard .portfolio-icons {
+    color: var(--gray-600);
+}
+
+#Projects .ProjectCard .card-text {
+    color: var(--gray-600);
 }
 
 #Projects .ProjectCard .content {

@@ -3,10 +3,24 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
+import StackIcon from './StackIcon';
 
 
 export default function ProjectCard(props) {
-    const imgName = 'card-img-cc.jpg'
+    /**
+     * PROPS
+     */
+    const {imgName, stackIcons} = props
+    const iconElements = stackIcons.map(iconName => {
+        return (
+            <StackIcon
+                iconName={iconName}
+            />
+        )
+    })
+
+
+
     const devImgPath = `/${imgName}`
     const liveImgPath = `/react-portfolio/${imgName}`
 
@@ -28,28 +42,14 @@ export default function ProjectCard(props) {
                 <Card.Body className='p-0 position-relative'>
                     <Card.Img variant="top"
                         src={imgPath} />
-                    <div class="data position-absolute bg-white">
-                        <div class="content">
-                            <Card.Title
-                                className='ms-3 mt-3'>Card Title</Card.Title>
-                            <Card.Subtitle
-                                className="mb-3 text-muted ms-3">Card Subtitle</Card.Subtitle>
-                            <Row
-                            className='mx-2'>
-                                <Col className='text-center fs-1'>
-                                    <i class="portfolio-icons devicon-android-plain" />
-                                </Col>
-                                <Col className=' fs-1 text-center'>
-                                    <i class="devicon-android-plain" />
-                                </Col>
-                                <Col className=' fs-1 text-center'>
-                                    <i class="devicon-android-plain" />
-                                </Col>
-                                <Col className=' fs-1 text-center'>
-                                    <i class="devicon-android-plain" />
-                                </Col>
-
+                    <div className="data position-absolute bg-dark">
+                        <div className="content">
+                            <Row className='mx-2 mt-1'>
+                                {iconElements}
                             </Row>
+                            <Card.Text className='px-3 pb-3'>
+                                Click for more info
+                            </Card.Text>
                         </div>
                     </div>
                 </Card.Body>
