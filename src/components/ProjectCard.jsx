@@ -4,25 +4,35 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import StackIcon from './StackIcon';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 
 export default function ProjectCard(props) {
-    /**
-     * PROPS
-     */
-    const {imgName, stackIcons} = props
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+    const { imgName, stackIcons } = props
+
+    //Building Stack Icon Section
     const iconElements = stackIcons.map((icon, i) => {
         return (
             <StackIcon
                 key={i}
                 className={icon.className}
-                title = {icon.title}
+                title={icon.title}
             />
         )
     })
 
 
 
+    /**
+     * Logic to properly path image location
+     * on live vs dev build
+     */
     const devImgPath = `/${imgName}`
     const liveImgPath = `/react-portfolio/${imgName}`
 
@@ -33,6 +43,7 @@ export default function ProjectCard(props) {
     }
     const imgPath = ImageExist(devImgPath) ? devImgPath : liveImgPath
 
+
     return (
         <Col
             xs={12}
@@ -40,8 +51,14 @@ export default function ProjectCard(props) {
             xl={4}
             className='px-auto'
         >
-            <Card className='ProjectCard p-0 mx-auto' style={{ width: '18rem' }}>
+            <Card onClick={handleShow} className='ProjectCard p-0 mx-auto' style={{ width: '18rem' }}>
                 <Card.Body className='p-0 position-relative'>
+                    <div className="project--title position-absolute top-5 start-5 ">
+                        <h3>Care Corner</h3>
+                        <p>
+                            Android Application
+                        </p>
+                    </div>
                     <Card.Img variant="top"
                         src={imgPath} />
                     <div className="data position-absolute bg-dark">
@@ -56,6 +73,20 @@ export default function ProjectCard(props) {
                     </div>
                 </Card.Body>
             </Card>
+
+            <Modal show={show} onHide={handleClose} size="lg">
+                <Modal.Header closeButton>
+                    <Modal.Title>Modal heading</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>Care Corner is an Android application that served as the senior team project for my CS degree. This prototype served as my team's proof of concept for our application designed to increase the user's safety</Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </Col>
+
+
     )
 }

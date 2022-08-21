@@ -8,6 +8,7 @@
     outline: none;
     border: none;
     filter: drop-shadow(7px 7px 7px var(--gray-800));
+    cursor: pointer;
 }
 
 #Projects .ProjectCard .data {
@@ -15,6 +16,11 @@
     width: 100%;
     transform: translateY(calc(20px + 1em));
     transition: transform 0.3s;
+    --bs-bg-opacity: .4;
+}
+
+#Projects .ProjectCard .project--title {
+    color: var(--neutral-white);
     --bs-bg-opacity: .4;
 }
 
