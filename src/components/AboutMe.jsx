@@ -18,10 +18,10 @@ function AboutMe(props) {
             />
         )
     })
-    
+
     return (
-        <section className='container-fluid position-relative' id='AboutMe'>
-            <h2 className='mt-5 mb-3 text-center'>
+        <section className='container-fluid position-relative bg-white' id='AboutMe'>
+            <h2 className='pt-5 mb-3 text-center'>
                 About Me</h2>
             <Row className='container-lg mx-auto px-0'>
                 <Col xs={12} md={{ span: 5, offset: 1 }} className=''>

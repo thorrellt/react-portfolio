@@ -20,7 +20,7 @@ export default function Projects(props) {
 
     return (
         <section className='container-fluid position-relative bg-secondary' id='Projects'>
-            <h2 className='mt-5 mb-3 text-center'>
+            <h2 className='pt-5 mb-3 text-center'>
                 Projects</h2>
             <Container className='gy-5 mx-auto row'>
                 {projCardElements}

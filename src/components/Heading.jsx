@@ -101,7 +101,7 @@ function Heading(props) {
         </Button>
       </div>
 
-      <a href="#" className='down-arrow-link position-absolute bottom-0 start-50 translate-middle-x'>
+      <a href="#AboutMe" className='down-arrow-link position-absolute bottom-0 start-50 translate-middle-x'>
         <i className="down-arrow bi bi-chevron-compact-down"></i>
       </a>
 
