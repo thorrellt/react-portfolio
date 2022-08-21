@@ -1,3 +1,15 @@
 #Projects h2 {
     font-weight: 900;
 }
+
+#Projects .ProjectCard {
+    border-radius: 1.5rem !important;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    filter: drop-shadow(7px 7px 7px var(--gray-800));
+}
+
+#Projects .ProjectCard .portfolio-icons {
+    
+}

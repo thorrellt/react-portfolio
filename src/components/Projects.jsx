@@ -5,14 +5,21 @@ import Col from 'react-bootstrap/Col';
 import ProjectCard from './ProjectCard'
 import '../styles/Projects.css'
 
-export default function Projects(props){
+export default function Projects(props) {
     return (
-        <section className='container-fluid position-relative' id='Projects'>
+        <section className='container-fluid position-relative bg-secondary' id='Projects'>
             <h2 className='mt-5 mb-3 text-center'>
                 Projects</h2>
-            <ProjectCard />
+            <Container className='gy-5 mx-auto row'>
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+                <ProjectCard />
+
+            </Container>
+
         </section>
-    
+
     )
 
 }
