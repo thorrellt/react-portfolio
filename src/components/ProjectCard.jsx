@@ -14,7 +14,7 @@ export default function ProjectCard(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const { imgName, stackIcons, title1, title2, type } = props
+    const { imgName, stackIcons, title1, title2, type, description } = props
 
     //Building Stack Icon Section
     const iconElements = stackIcons.map((icon, i) => {
@@ -74,9 +74,9 @@ export default function ProjectCard(props) {
 
             <Modal show={show} onHide={handleClose} size="lg">
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>{`${title1} ${title2}`}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Care Corner is an Android application that served as the senior team project for my CS degree. This prototype served as my team's proof of concept for our application designed to increase the user's safety</Modal.Body>
+                <Modal.Body>{description}</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close

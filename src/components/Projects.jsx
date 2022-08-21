@@ -16,6 +16,7 @@ export default function Projects(props) {
                 stackIcons={projCard.stackIcons}
                 title1={projCard.title1}
                 title2={projCard.title2}
+                description = {projCard.description}
                 type={projCard.type}
             />
         )
