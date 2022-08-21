@@ -3,15 +3,61 @@ const ccIcons = ["devicon-android-plain", "devicon-java-plain", "devicon-git-pla
 export default [
     {
         imgName: 'card-img-cc.jpg',
-        stackIcons: ["devicon-android-plain", "devicon-java-plain", "devicon-git-plain", "devicon-docker-plain"]
+        stackIcons: [
+            {
+                title: "Android",
+                className: "devicon-android-plain",
+            },
+            {
+                title: "Java",
+                className: "devicon-java-plain",
+            },
+            {
+                title: "Version Contro",
+                className: "devicon-git-plain",
+            },
+            {
+                title: "Docker",
+                className: "devicon-docker-plain",
+            }
+        ]
     },
     {
         imgName: 'card-img-mc311.jpg',
-        stackIcons: ["devicon-bootstrap-plain", "devicon-html5-plain", "devicon-css3-plain", "devicon-javascript-plain"]
+        stackIcons: [
+            {
+                title: "Bootstrap-5",
+                className: "devicon-bootstrap-plain",
+            },
+            {
+                title: "HTML 5",
+                className: "devicon-html5-plain",
+            },
+            {
+                title: "CSS 3",
+                className: "devicon-css3-plain",
+            },
+            {
+                title: "JavaScript",
+                className: "devicon-javascript-plain",
+            }
+        ]
     },
     {
         imgName: 'card-img-api.jpg',
-        stackIcons: ["devicon-nodejs-plain", "devicon-javascript-plain", "devicon-mongodb-plain"]
+        stackIcons: [
+            {
+                title: "Node.js",
+                className: "devicon-nodejs-plain",
+            },
+            {
+                title: "JavaScript",
+                className: "devicon-javascript-plain",
+            },
+            {
+                title: "MongoDB",
+                className: "devicon-mongodb-plain",
+            }
+        ]
     }
-
 ]
