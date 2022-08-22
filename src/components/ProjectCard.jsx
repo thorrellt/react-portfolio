@@ -33,15 +33,22 @@ export default function ProjectCard(props) {
      * Logic to properly path image location
      * on live vs dev build
      */
+    
     const devImgPath = `/${imgName}`
     const liveImgPath = `/react-portfolio/${imgName}`
 
-    function ImageExist(url) {
+    const modalImgName = 'modal-img-mc311.jpg'
+    const devModalImgPath = `/${modalImgName}`
+    const liveModalImgPath = `/react-portfolio/${modalImgName}`
+
+    function imageExist(url) {
         var img = new Image();
         img.src = url;
         return img.height != 0;
     }
-    const imgPath = ImageExist(devImgPath) ? devImgPath : liveImgPath
+    const imgPath = imageExist(devImgPath) ? devImgPath : liveImgPath
+
+    const modalImgPath = imageExist(devModalImgPath) ? devModalImgPath : liveModalImgPath
 
 
     return (
@@ -72,9 +79,14 @@ export default function ProjectCard(props) {
                 </Card.Body>
             </Card>
 
-            <Modal show={show} onHide={handleClose} size="lg">
-                <Modal.Header closeButton>
-                    <Modal.Title>{`${title1} ${title2}`}</Modal.Title>
+            <Modal 
+            show={show} 
+            onHide={handleClose} 
+            size="lg">
+                <Modal.Header closeButton className='position-relative p-0 overflow-hidden'>
+                    <img src={modalImgPath} alt="" className='img-fluid' />
+                    <Modal.Title
+                    className='modal--title position-absolute top-5 start-5'>{`${title1} ${title2}`}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>{description}</Modal.Body>
                 <Modal.Footer>

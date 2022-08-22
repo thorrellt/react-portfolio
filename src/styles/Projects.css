@@ -19,7 +19,7 @@
     --bs-bg-opacity: .4;
 }
 
-#Projects .ProjectCard .project--title {
+#Projects .project--title {
     color: var(--neutral-white);
     --bs-bg-opacity: .4;
     white-space: pre-line;
@@ -40,4 +40,10 @@
 
 #Projects .ProjectCard:hover .data {
     transform: translateY(0);
+}
+
+.modal--title{
+    color: var(--neutral-white);
+    --bs-bg-opacity: .4;
+    white-space: pre-line;
 }
