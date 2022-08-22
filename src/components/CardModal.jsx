@@ -75,8 +75,8 @@ export default function CardModal(props) {
                     className="repo btn btn-danger me-auto" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Visit repo for thorrellt.com">
-                    <i class="bi bi-globe"></i> Live
+                    title={`Visit demo for ${title1} ${title2}`}>
+                    <i className="bi bi-globe"></i> Live
                 </a>}
 
                 <a
@@ -84,8 +84,8 @@ export default function CardModal(props) {
                     className="repo btn btn-primary mx-1" 
                     target="_blank"
                     rel="noopener noreferrer"
-                    title="Visit repo for thorrellt.com">
-                    <i class="devicon-github-original colored"></i> GitHub
+                    title={`Visit repo for ${title1} ${title2}`}>
+                    <i className="devicon-github-original colored"></i> GitHub
                 </a>
 
                 <Button variant="secondary" onClick={handleClose}>
