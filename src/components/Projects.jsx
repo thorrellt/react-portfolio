@@ -12,12 +12,15 @@ export default function Projects(props) {
         return (
             <ProjectCard
                 key = {i}
-                imgName={projCard.imgName}
-                stackIcons={projCard.stackIcons}
                 title1={projCard.title1}
                 title2={projCard.title2}
-                description = {projCard.description}
                 type={projCard.type}
+                description = {projCard.description}
+                imgName={projCard.imgName}
+                liveURL = {projCard.liveURL}
+                gitURL = {projCard.gitURL}
+                takeaways = {projCard.takeaways}
+                stackIcons={projCard.stackIcons}
             />
         )
     })

@@ -3,20 +3,51 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import StackIcon from './StackIcon';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import CardModal from './CardModal';
+import StackIcon from './StackIcon';
 
+
+/**
+ * Logic to properly path image location
+ * on live vs dev build
+ */
+function imageExist(url) {
+    var img = new Image();
+    img.src = url;
+    return img.height != 0;
+}
+
+function getImg(imgName) {
+    const devPath = `/${imgName}`
+    const livePath = `/react-portfolio/${imgName}`
+    return imageExist(devPath) ? devPath : livePath
+}
 
 export default function ProjectCard(props) {
+    // Modal states and methods
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const { stackIcons, title1, title2, type, description } = props
+
+    // Props and image paths
+    const { 
+        title1, 
+        title2, 
+        type, 
+        description,
+        liveURL,
+        gitURL,
+        takeaways, 
+        stackIcons, 
+    } = props
     const imgName = "card-" + props.imgName
     const modalImgName = "modal-" + props.imgName
+    const imgPath = getImg(imgName);
+    const modalImgPath = getImg(modalImgName);
+
 
     //Building Stack Icon Section
     const iconElements = stackIcons.map((icon, i) => {
@@ -29,26 +60,7 @@ export default function ProjectCard(props) {
         )
     })
 
-
-
-    /**
-     * Logic to properly path image location
-     * on live vs dev build
-     */
-    function imageExist(url) {
-        var img = new Image();
-        img.src = url;
-        return img.height != 0;
-    }
- 
-    function getImg(imgName) {
-        const devPath = `/${imgName}`
-        const livePath = `/react-portfolio/${imgName}`
-        return imageExist(devPath) ? devPath : livePath
-    }
-    const imgPath = getImg(imgName);
-    const modalImgPath = getImg(modalImgName);
-
+    
     return (
         <Col
             xs={12}
@@ -77,24 +89,13 @@ export default function ProjectCard(props) {
                 </Card.Body>
             </Card>
 
-            <Modal
-                show={show}
-                onHide={handleClose}
-                size="lg">
-                <Modal.Header closeButton className='position-relative p-0 overflow-hidden'>
-                    <img src={modalImgPath} alt="" className='img-fluid' />
-                    <Modal.Title
-                        className='modal--title position-absolute top-5 start-5'>{`${title1} ${title2}`}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>{description}</Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+            <CardModal 
+            props = {props}
+            modalImgPath = {modalImgPath}
+            show = {show}
+            handleClose = {handleClose}
+            handleShow = {handleShow}
+            />
         </Col>
-
-
     )
 }

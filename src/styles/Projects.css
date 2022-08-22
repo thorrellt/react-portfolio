@@ -47,3 +47,7 @@
     --bs-bg-opacity: .4;
     white-space: pre-line;
 }
+
+.modal--stack {
+    color: var(--gray-800);
+}

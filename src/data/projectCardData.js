@@ -7,7 +7,6 @@ export default [
         type: "Android Application",
         description: "Care Corner is an Android application that served as the senior team project for my CS degree. This prototype served as my team's proof of concept for our application designed to increase the user's safety",
         imgName: 'img-cc.jpg',
-        modalImgName: 'modal-img-cc.jpg',
         gitURL: 'https://github.com/thorrellt/care-corner',
         takeaways: [
             {
@@ -47,7 +46,6 @@ export default [
         type: "Web Application",
         description: "This web tool was developed to aid Montgomery County, Maryland's 311 phone number (MC 311) which serves as the main entry point for residents to access public information and government services. This application increases the speed and efficiency that the MC 311 representatives can access info and handle calls by generating fleshed out notes, based on user inputs, and aggregating commonly accessed data.",
         imgName: 'img-mc311.jpg',
-        modalImgName: 'modal-img-mc311.jpg',
         liveURL: 'https://thorrellt.github.io/mc311-tool/',
         gitURL: 'https://github.com/thorrellt/mc311-tool',
         takeaways: [
@@ -88,20 +86,19 @@ export default [
         type: "REST API",
         description: "This is a basic Node.js RESTful API modeled after an order management system. This API handles GET, PATCH, PULL, & DELETE requests for Orders, Products, & Users. Data is stored in a MongoDB Atlas database.",
         imgName: 'img-api.jpg',
-        modalImgName: 'modal-img-mc311.jpg',
         gitURL: 'https://github.com/thorrellt/care-corner',
         takeaways: [
             {
-                title: "Android Development",
-                content: "Taught myself Android development independent of class curriculum."
+                title: "Node.js",
+                content: "Served as my intro to Node.js &sol; Express&apos; basic capabilities &amp; some of its related packages."
             },
             {
-                title: "API Integration",
-                content: "Integrated the HERE API to build our mapping features."
+                title: "MongoDB",
+                content: "Refined knowledge of NoSQL fundamentals & served as an intro to related tools such as MongoD's cloud platform Atlas, as well as both the Mongoose & Multer packages."
             },
             {
-                title: "Leadership",
-                content: "Served as the organizational head &amp; team lead of the project."
+                title: "REST",
+                content: "Learned the RESTful style of design / architecture as well as the constraints all REST services should adhere to."
             }],
         stackIcons: [
             {
