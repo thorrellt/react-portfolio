@@ -3,6 +3,7 @@ import MainNav from './MainNav'
 import Heading from './Heading'
 import AboutMe from './AboutMe'
 import Projects from './Projects'
+import ContactMe from './ContactMe'
 import '../styles/App.css'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
@@ -36,6 +37,7 @@ function App() {
       <Heading windowWidth = {windowWidth}/>
       <AboutMe />
       <Projects />
+      <ContactMe />
 
     </div>
   )
