@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef }  from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -13,16 +13,18 @@ export default function ContactForm(props) {
         formData,
         validated,
         handleChange,
-        handleSubmit
+        handleSubmit, 
+        formElement: formElement
     } = props
 
     return (
-        <Form className='pe-5' noValidate validated={validated} onSubmit={handleSubmit}>
+        <Form ref={formElement} className='pe-5' noValidate validated={validated} onSubmit={handleSubmit}>
             <Form.Group
                 className="mb-3"
                 controlId="name"
                 value={formData.name}
-                onChange={handleChange}>
+                onChange={handleChange}
+                name="name">
                 <Form.Label>Name</Form.Label>
                 <Form.Control required type="text" placeholder="Enter Name" />
                 <Form.Control.Feedback
@@ -36,7 +38,8 @@ export default function ContactForm(props) {
                 className="mb-3"
                 controlId="email"
                 value={formData.email}
-                onChange={handleChange}>
+                onChange={handleChange}
+                name="email">
                 <Form.Label>Email</Form.Label>
                 <Form.Control required type="email" placeholder="Enter email" />
                 <Form.Control.Feedback
@@ -50,7 +53,8 @@ export default function ContactForm(props) {
                 className="mb-3"
                 controlId="message"
                 value={formData.message}
-                onChange={handleChange}>
+                onChange={handleChange}
+                name="message">
                 <Form.Label>Enter Message</Form.Label>
                 <Form.Control required as="textarea" rows={3} />
                 <Form.Control.Feedback type="invalid"

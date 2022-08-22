@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import ContactForm from './ContactForm';
 import '../styles/ContactMe.css'
+import emailjs from '@emailjs/browser';
 
 
 export default function ContactMe(props) {
@@ -37,11 +38,14 @@ export default function ContactMe(props) {
         })
         console.log(formData)
     }
+    const formElement = useRef();
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
+        
 
-        console.log(form)
+        console.log("form2:: " + formElement.current)
+    
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
@@ -49,6 +53,12 @@ export default function ContactMe(props) {
             console.log("ran as true")
             event.preventDefault();
             handleShow();
+            emailjs.sendForm('thorrellt.com', 'template_6y3kszf', formElement.current, 'od55Vqedr_y5-XmDj')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
             setFormData(() => {
                 return {
                     id: '',
@@ -81,6 +91,7 @@ export default function ContactMe(props) {
                     validated={validated}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
+                    formElement={formElement}
                 />
                 }
 
