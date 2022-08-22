@@ -114,5 +114,6 @@ export default [
                 className: "devicon-mongodb-plain",
             }
         ]
-    }
+    },
+    
 ]

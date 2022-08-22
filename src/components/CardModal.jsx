@@ -16,7 +16,9 @@ export default function CardModal(props) {
         description,
         type,
         takeaways,
-        stackIcons
+        stackIcons,
+        liveURL,
+        gitURL
     } = props.props
 
     const { show, handleClose, handleShow, modalImgPath } = props
@@ -24,9 +26,9 @@ export default function CardModal(props) {
     const takeawayListElements = takeaways.map((takeaway, i) => {
         return (
             <li key={i} >
-                <span className='fw-bold'>{`${takeaway.title} `}</span> 
+                <span className='fw-bold'>{`${takeaway.title} `}</span>
                 <small>
-                {takeaway.content}
+                    {takeaway.content}
                 </small>
             </li>
         )
@@ -52,9 +54,9 @@ export default function CardModal(props) {
                 <img src={modalImgPath} alt="" className='img-fluid' />
                 <div
                     className='modal--title position-absolute top-5 start-5 pt-2'>
-                        <h5 className='mb-0'>{`${title1} ${title2}`}</h5>
-                        <small>{type}</small>
-                        </div>
+                    <h5 className='mb-0'>{`${title1} ${title2}`}</h5>
+                    <small>{type}</small>
+                </div>
             </Modal.Header>
             <Modal.Body>
                 <Row className='modal--stack'>
@@ -66,7 +68,26 @@ export default function CardModal(props) {
 
 
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer className='d-flex'>
+                {liveURL &&
+                <a
+                    href={liveURL}
+                    className="repo btn btn-danger me-auto" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Visit repo for thorrellt.com">
+                    <i class="bi bi-globe"></i> Live
+                </a>}
+
+                <a
+                    href={gitURL}
+                    className="repo btn btn-primary mx-1" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Visit repo for thorrellt.com">
+                    <i class="devicon-github-original colored"></i> GitHub
+                </a>
+
                 <Button variant="secondary" onClick={handleClose}>
                     Close
                 </Button>
