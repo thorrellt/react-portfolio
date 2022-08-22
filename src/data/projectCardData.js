@@ -6,7 +6,22 @@ export default [
         title2: "Corner",
         type: "Android Application",
         description: "Care Corner is an Android application that served as the senior team project for my CS degree. This prototype served as my team's proof of concept for our application designed to increase the user's safety",
-        imgName: 'card-img-cc.jpg',
+        imgName: 'img-cc.jpg',
+        modalImgName: 'modal-img-cc.jpg',
+        gitURL: 'https://github.com/thorrellt/care-corner',
+        takeaways: [
+            {
+                title: "Android Development",
+                content: "Taught myself Android development independent of class curriculum."
+            },
+            {
+                title: "API Integration",
+                content: "Integrated the HERE API to build our mapping features."
+            },
+            {
+                title: "Leadership",
+                content: "Served as the organizational head &amp; team lead of the project."
+            }],
         stackIcons: [
             {
                 title: "Android",
@@ -30,8 +45,24 @@ export default [
         title1: "MC-311",
         title2: "Notes Tool",
         type: "Web Application",
-        description: "Montgomery County, Maryland's 311 phone number (known simply as MC311) serves as the main entry point for residents to access public information and government services. This application was built to help increase the speed and efficiency that the representatives from MC311 can access information and handle calls. This is primarily done by generating fleshed out notes based on minimal user inputs, and aggregating commonly accessed data. The idea is that reducing the redundancies associated with this job would help representatives assist more residents.",        
-        imgName: 'card-img-mc311.jpg',
+        description: "This web tool was developed to aid Montgomery County, Maryland's 311 phone number (MC 311) which serves as the main entry point for residents to access public information and government services. This application increases the speed and efficiency that the MC 311 representatives can access info and handle calls by generating fleshed out notes, based on user inputs, and aggregating commonly accessed data.",
+        imgName: 'img-mc311.jpg',
+        modalImgName: 'modal-img-mc311.jpg',
+        liveURL: 'https://thorrellt.github.io/mc311-tool/',
+        gitURL: 'https://github.com/thorrellt/mc311-tool',
+        takeaways: [
+            {
+                title: "Bootstrap 5",
+                content: "This was my first solo project using Bootstrap 5 framework."
+            },
+            {
+                title: "JavaScript Data Structure Manipulation",
+                content: "This project provided plenty of practice manipulating JS data structures using their inherent methods."
+            },
+            {
+                title: "Leveraging User Feedback",
+                content: "I utilized peer/user to correct overlooked bugs, and better design the tool to cover a broader range of needs."
+            }],
         stackIcons: [
             {
                 title: "Bootstrap-5",
@@ -56,7 +87,22 @@ export default [
         title2: "Management API",
         type: "REST API",
         description: "This is a basic Node.js RESTful API modeled after an order management system. This API handles GET, PATCH, PULL, & DELETE requests for Orders, Products, & Users. Data is stored in a MongoDB Atlas database.",
-        imgName: 'card-img-api.jpg',
+        imgName: 'img-api.jpg',
+        modalImgName: 'modal-img-mc311.jpg',
+        gitURL: 'https://github.com/thorrellt/care-corner',
+        takeaways: [
+            {
+                title: "Android Development",
+                content: "Taught myself Android development independent of class curriculum."
+            },
+            {
+                title: "API Integration",
+                content: "Integrated the HERE API to build our mapping features."
+            },
+            {
+                title: "Leadership",
+                content: "Served as the organizational head &amp; team lead of the project."
+            }],
         stackIcons: [
             {
                 title: "Node.js",
