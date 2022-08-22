@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Modal from 'react-bootstrap/Modal';
+import ContactForm from './ContactForm';
 import '../styles/ContactMe.css'
 
 
@@ -12,12 +14,18 @@ export default function ContactMe(props) {
     const [formData, setFormData] = useState({
         id: '',
         email: '',
-        message:'',
+        message: '',
+        submitted: false,
     });
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
 
     const [validated, setValidated] = useState(false);
 
-    const handleChange = (event) =>{
+    const handleChange = (event) => {
         const id = event.target.id;
         const value = event.target.value;
 
@@ -27,20 +35,40 @@ export default function ContactMe(props) {
                 [id]: value
             }
         })
-       console.log(formData)
+        console.log(formData)
     }
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
+
         console.log(form)
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
+        } else {
+            console.log("ran as true")
+            event.preventDefault();
+            handleShow();
+            setFormData(() => {
+                return {
+                    id: '',
+                    email: '',
+                    message: '',
+                    submitted: true,
+                }
+            })
         }
-        
-        // console.log(form)
         setValidated(true);
     };
+
+
+
+    const submittedText = (
+        <div className="submisison--text">
+            <p>Thanks form reaching out, I will follow up with you as soon as possible!!</p>
+            <p>-Thorrell</p>
+        </div>
+    )
 
     return (
         <section className='container-fluid position-relative bg-primary pb-5' id='ContactMe'>
@@ -48,38 +76,31 @@ export default function ContactMe(props) {
                 Contact Me</h2>
 
             <Container className='pe-5'>
-                <Form className='pe-5'>
-                    <Form.Group 
-                    className="mb-3" 
-                    controlId="name"
-                    value={formData.name}
-                    onChange={handleChange}>
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control required type="text" placeholder="Enter Name" />
-                    </Form.Group>
+                {!formData.submitted && <ContactForm
+                    formData={formData}
+                    validated={validated}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                />
+                }
 
-                    <Form.Group 
-                    className="mb-3" 
-                    controlId="email"
-                    value={formData.email}
-                    onChange={handleChange}>
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control required type="email" placeholder="Enter email" />
-                    </Form.Group>
+                {formData.submitted && <div className="submisison--text">
+                    <h6 className='fs-6 font-weight-bold'>Thanks form reaching out, I will follow up with you as soon as possible!!</h6>
+                    <p className='fs-6'>-Thorrell</p>
+                </div>
+                }
 
-                    <Form.Group 
-                    className="mb-3" 
-                    controlId="message"
-                    value={formData.message}
-                    onChange={handleChange}>
-                        <Form.Label>Enter Message</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
-                    </Form.Group>
 
-                    <Button variant="danger" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+
+
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Body>Your submission was successful!</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="primary" onClick={handleClose}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
 
             </Container>
         </section>
