@@ -31,10 +31,30 @@ function App() {
   }, [])
 
 
+  //update URL with current #anchor on scroll
+  $(function () {
+    var currentHash = "#Heading"
+    $(document).scroll(function () {
+      $('.main-section').each(function () {
+        var top = window.pageYOffset;
+        var distance = top - $(this).offset().top;
+        var hash = '#' + $(this).attr('id');
+        // console.log(hash)
+
+        if (distance < 30 && distance > -30 && currentHash != hash) {
+          // alert(hash);
+          console.log(hash)
+          history.replaceState(null, '', hash);
+          currentHash = hash;
+        }
+      });
+    });
+  });
+
   return (
     <div className="App">
       <MainNav />
-      <Heading windowWidth = {windowWidth}/>
+      <Heading windowWidth={windowWidth} />
       <AboutMe />
       <Projects />
       <ContactMe />

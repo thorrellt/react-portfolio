@@ -30,7 +30,7 @@ function Heading(props) {
 
 
   return (
-    <section className="mx-0 container-fluid .Heading position-relative" id='Heading' >
+    <section className="mx-0 container-fluid .Heading position-relative main-section" id='Heading' >
       <Row>
         <div id="heading--left"
           className="mx-0 px-0 col-12 col-sm-6 bg-secondary position-relative">

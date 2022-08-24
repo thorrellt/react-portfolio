@@ -81,7 +81,7 @@ export default function ContactMe(props) {
     )
 
     return (
-        <section className='container-fluid position-relative bg-primary pb-5' id='ContactMe'>
+        <section className='container-fluid position-relative bg-primary pb-5 main-section' id='ContactMe'>
             <h2 className='pt-5 mb-3 text-center'>
                 Contact Me</h2>
 

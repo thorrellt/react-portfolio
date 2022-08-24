@@ -20,7 +20,7 @@ function AboutMe(props) {
     })
 
     return (
-        <section className='container-fluid position-relative bg-white' id='AboutMe'>
+        <section className='container-fluid position-relative bg-white main-section' id='AboutMe'>
             <h2 className='pt-5 mb-3 text-center'>
                 About Me</h2>
             <Row className='container-lg mx-auto px-0'>
