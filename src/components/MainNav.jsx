@@ -6,8 +6,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../styles/MainNav.css'
 
 function MainNav(props) {
-    const {currentHash, setCurrentHash} =props;
-    
+    const { currentHash, setCurrentHash } = props;
+
     //NAV BAR SCROLL CONTROLS
     let prevScrollpos = window.pageYOffset;
     window.onscroll = function () {
@@ -21,7 +21,7 @@ function MainNav(props) {
     }
 
 
-    const expand = "lg"
+    const expand = "xl"
     return (
 
         <Navbar collapseOnSelect expand={expand} id="MainNav" fixed="top" bg="primary" className="py-2" variant="dark">
@@ -42,10 +42,15 @@ function MainNav(props) {
                     <Offcanvas.Body>
                         <Nav className="ms-auto">
                             <Nav.Link
+                                href="#Heading"
+                                className={`mx-2 
+                                ${currentHash === "#Heading" ? 'active' : ''}`} >
+                                Home</Nav.Link>
+                            <Nav.Link
                                 href="#AboutMe"
                                 className={`mx-2 
                                 ${currentHash === "#AboutMe" ? 'active' : ''}`} >
-                                    About Me</Nav.Link>
+                                About Me</Nav.Link>
                             <Nav.Link
                                 href="#Projects"
                                 className={`mx-2 

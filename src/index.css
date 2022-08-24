@@ -5,6 +5,10 @@
   --gray-800: #205a58;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .btn, nav{
   font-family: 'IBM Plex Sans', sans-serif;
 }
