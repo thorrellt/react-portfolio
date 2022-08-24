@@ -5,7 +5,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../styles/MainNav.css'
 
-function MainNav() {
+function MainNav(props) {
+    const {currentHash, setCurrentHash} =props;
     
     //NAV BAR SCROLL CONTROLS
     let prevScrollpos = window.pageYOffset;
@@ -18,6 +19,7 @@ function MainNav() {
         }
         prevScrollpos = currentScrollPos;
     }
+
 
     const expand = "lg"
     return (
@@ -41,13 +43,17 @@ function MainNav() {
                         <Nav className="ms-auto">
                             <Nav.Link
                                 href="#AboutMe"
-                                className="mx-2">About Me</Nav.Link>
+                                className={`mx-2 
+                                ${currentHash === "#AboutMe" ? 'active' : ''}`} >
+                                    About Me</Nav.Link>
                             <Nav.Link
                                 href="#Projects"
-                                className="mx-2">Projects</Nav.Link>
+                                className={`mx-2 
+                                ${currentHash === "#Projects" ? 'active' : ''}`} >Projects</Nav.Link>
                             <Nav.Link
                                 href="#ContactMe"
-                                className="mx-2">Contact Me</Nav.Link>
+                                className={`mx-2 
+                                ${currentHash === "#ContactMe" ? 'active' : ''}`}>Contact Me</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
                 </Navbar.Offcanvas>

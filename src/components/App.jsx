@@ -10,6 +10,18 @@ import Alert from 'react-bootstrap/Alert'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../scss/custom.scss'
 
+function updateActiveNav(hash){
+  const sections = document.getElementsByClassName("main-section")
+  const sectionsArr = Array.prototype.slice.call(sections)
+  sectionsArr.forEach(section => {
+    if(`#${section.id}` === hash){
+      section.classList.add("active")
+    } else {
+    section.classList.remove("active")
+    }
+  })
+}
+
 function App() {
   /**
    * wondow width to be passed to components
@@ -30,30 +42,51 @@ function App() {
     }
   }, [])
 
+  const [currentHash, setCurrentHash] = useState('#Heading')
+  const [lastUpdateTime, setLastUpdateTime] = useState(Date.now())
 
   //update URL with current #anchor on scroll
   $(function () {
-    var currentHash = "#Heading"
     $(document).scroll(function () {
       $('.main-section').each(function () {
         var top = window.pageYOffset;
         var distance = top - $(this).offset().top;
         var hash = '#' + $(this).attr('id');
-        // console.log(hash)
+
 
         if (distance < 30 && distance > -30 && currentHash != hash) {
-          // alert(hash);
-          console.log(hash)
-          history.replaceState(null, '', hash);
-          currentHash = hash;
+          // console.log("distance:: " + distance)
+          // console.log("hash:: " + hash)
+          // console.log("currentHash:: " + currentHash)
+
+          setCurrentHash(() => {
+            // console.log("setter ran for::" + hash)
+            return hash
+          })
+          
+          // updateActiveNav(hash)
+          // setCurrentHash(hash)
+
         }
       });
     });
   });
 
+  useEffect(() => {
+    console.log("USE EFFECT RAN FOR::" + currentHash)
+    const currTime = Date.now()
+    if (currTime - lastUpdateTime > 500) {
+      // console.log("ran")
+      history.replaceState(null, '', currentHash);
+      setLastUpdateTime(currTime);
+    }
+  }, [currentHash])
+
   return (
     <div className="App">
-      <MainNav />
+      <MainNav
+        currentHash={currentHash} 
+        setCurrentHash={setCurrentHash} />
       <Heading windowWidth={windowWidth} />
       <AboutMe />
       <Projects />

@@ -31,11 +31,6 @@ a.nav-link {
   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
 }
 
-.nav-link:focus {
-  outline: none;
-  width: 100%;
-}
-
 .nav-link:hover:after {
   width: 90%;
 }
@@ -49,4 +44,8 @@ a.nav-link {
   #MainNav {
     --bs-bg-opacity: 1;
   }  
+}
+
+#MainNav a .nav-link:active {
+  max-width: 33%;
 }
