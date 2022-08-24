@@ -40,13 +40,13 @@ function MainNav() {
                     <Offcanvas.Body>
                         <Nav className="ms-auto">
                             <Nav.Link
-                                href="#"
+                                href="#AboutMe"
                                 className="mx-2">About Me</Nav.Link>
                             <Nav.Link
-                                href="#"
+                                href="#Projects"
                                 className="mx-2">Projects</Nav.Link>
                             <Nav.Link
-                                href="#"
+                                href="#ContactMe"
                                 className="mx-2">Contact Me</Nav.Link>
                         </Nav>
                     </Offcanvas.Body>
