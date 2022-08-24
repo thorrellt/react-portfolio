@@ -3,6 +3,7 @@
   left: auto;
   min-height: 66px;
   --bs-bg-opacity: .7;
+  transition: top 0.3s;
 }
 
 .navbar-brand {

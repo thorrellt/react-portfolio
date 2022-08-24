@@ -6,12 +6,25 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import '../styles/MainNav.css'
 
 function MainNav() {
+    
+    //NAV BAR SCROLL CONTROLS
+    let prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("MainNav").style.top = "0";
+        } else {
+            document.getElementById("MainNav").style.top = "-80px";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+
     const expand = "lg"
     return (
 
-        <Navbar collapseOnSelect expand={expand} id="MainNav" fixed="top" bg="primary" className= "py-2" variant="dark">
+        <Navbar collapseOnSelect expand={expand} id="MainNav" fixed="top" bg="primary" className="py-2" variant="dark">
             <Container className="pe-3">
-                
+
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Offcanvas
                     id={`offcanvasNavbar-expand-${expand}`}
