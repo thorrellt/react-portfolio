@@ -12,7 +12,7 @@ import '../styles/ContactMe.css'
 
 export default function ContactForm(props) {
     const testKey = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
-    const liveKey = '6Ld2ZaghAAAAAKd4cPR8aXZ8ZgtiBF0gJIORCaCS'
+    // const liveKey = ''
     const {
         formData,
         validated,
@@ -74,11 +74,11 @@ export default function ContactForm(props) {
                 </Form.Control.Feedback>
             </Form.Group>
 
-            <ReCAPTCHA
+            {/* <ReCAPTCHA
                 sitekey='6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
                 theme='dark'
                 onChange={onChange}
-            />
+            /> */}
 
             <Button variant="danger" type="submit">
                 Submit
