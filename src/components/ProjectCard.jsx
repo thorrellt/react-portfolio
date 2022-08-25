@@ -22,7 +22,7 @@ function imageExist(url) {
 function getImg(imgName) {
     const devPath = `/${imgName}`
     const livePath = `/react-portfolio/${imgName}`
-    return imageExist(devPath) ? devPath : livePath
+    return imageExist(livePath) ? livePath : devPath
 }
 
 export default function ProjectCard(props) {
