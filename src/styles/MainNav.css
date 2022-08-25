@@ -45,7 +45,3 @@ a.nav-link {
     --bs-bg-opacity: 1;
   }  
 }
-
-#MainNav a .nav-link:active {
-  max-width: 33%;
-}

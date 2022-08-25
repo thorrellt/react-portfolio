@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -23,8 +23,12 @@ export default function ContactMe(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-
     const [validated, setValidated] = useState(false);
+
+    // const[recaptchaInstance, setRecaptchaInstance] = useState()
+
+
+
 
     const handleChange = (event) => {
         const id = event.target.id;
@@ -42,10 +46,10 @@ export default function ContactMe(props) {
 
     const handleSubmit = (event) => {
         const form = event.currentTarget;
-        
+
 
         console.log("form2:: " + formElement.current)
-    
+
         if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
@@ -67,6 +71,7 @@ export default function ContactMe(props) {
                     submitted: true,
                 }
             })
+
         }
         setValidated(true);
     };
@@ -92,6 +97,7 @@ export default function ContactMe(props) {
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
                     formElement={formElement}
+                    // recaptchaInstance={recaptchaInstance}
                 />
                 }
 
