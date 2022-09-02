@@ -4,6 +4,7 @@ import Heading from './Heading'
 import AboutMe from './AboutMe'
 import Projects from './Projects'
 import ContactMe from './ContactMe'
+import Footer from './Footer'
 import '../styles/App.css'
 import Button from 'react-bootstrap/Button'
 import Alert from 'react-bootstrap/Alert'
@@ -91,6 +92,7 @@ function App() {
       <AboutMe />
       <Projects />
       <ContactMe />
+      <Footer />
 
     </div>
   )

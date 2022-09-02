@@ -1,0 +1,30 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    /* border-top: 3px solid white; */
+    background-color: ;
+}
+
+.footer .bi-arrow-up-square-fill{
+    align-self: center;
+    color: var(--gray-800);
+    transition-duration: 200ms;
+}
+
+.footer .bi-arrow-up-square-fill:hover{
+    font-size: calc(1.425rem + 0.9vw) !important;
+    color: var(--gray-600);
+    transition-duration: 200ms;
+}
+.footer p {
+    align-self: center;
+}
+.footer a {
+    text-decoration: none;
+    color: var(--gray-800);
+}
+
+.footer p a:hover {
+    text-decoration: none;
+    color: var(--gray-600);
+}
