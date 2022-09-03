@@ -13,7 +13,7 @@ function Footer(props) {
                 <i className="bi bi-arrow-up-square-fill fs-2 ms-1" alt="Home"
                   title="Home"></i>
             </a>
-            <p className='mb-0'>Written by Thorrell Turner. View the code <a
+            <p className='mb-0 ms-3'>Written by Thorrell Turner. View the code <a
                 href='https://github.com/thorrellt/react-portfolio'
                 target="_blank"
                 rel="noopener noreferrer">
