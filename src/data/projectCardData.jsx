@@ -5,7 +5,11 @@ export default [
         title1: "Care",
         title2: "Corner",
         type: "Android Application",
-        description: "Care Corner is an Android application that served as the senior team project for my CS degree. This prototype served as my team's proof of concept for our application designed to increase the user's safety",
+        description: () => {
+            return (
+                <>Care Corner is an Android application that served as the senior team project for my CS degree. This prototype served as my team's proof of concept for our application designed to increase the user's safety</>
+            )
+        },
         imgName: 'img-cc.jpg',
         gitURL: 'https://github.com/thorrellt/care-corner',
         takeaways: [
@@ -44,7 +48,11 @@ export default [
         title1: "MC-311",
         title2: "Notes Tool",
         type: "Web Application",
-        description: "This web tool was developed to aid Montgomery County, Maryland's 311 phone number (MC 311) which serves as the main entry point for residents to access public information and government services. This application increases the speed and efficiency that the MC 311 representatives can access info and handle calls by generating fleshed out notes, based on user inputs, and aggregating commonly accessed data.",
+        description: () => {
+            return (
+                <>This web tool was developed to aid Montgomery County, Maryland's 311 phone number (MC 311) which serves as the main entry point for residents to access public information and government services. This application increases the speed and efficiency that the MC 311 representatives can access info and handle calls by generating fleshed out notes, based on user inputs, and aggregating commonly accessed data.</>
+            )
+        },
         imgName: 'img-mc311.jpg',
         liveURL: 'https://thorrellt.github.io/mc311-tool/',
         gitURL: 'https://github.com/thorrellt/mc311-tool',
@@ -81,10 +89,62 @@ export default [
         ]
     },
     {
+        title1: "room",
+        title2: "Furniture Store",
+        type: "Web Page",
+        description: () => {
+            return (
+                <>The room webpage is the landing page for a fictional furniture store. The design is from 
+                <a 
+                href='https://www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq'
+                target="_blank"
+                rel="noopener noreferrer"
+                title="www.frontendmentor.io/challenges/room-homepage-BtdBY_ENq"> frontendmentor.com.</a> The page is responsive and designed for screens as small as 375px. The arrows trigger a sliding animation that dynamically loads the next slide. The mouse wheel can also trigger this transition.</>
+            )
+        },
+        imgName: 'img-room.jpg',
+        liveURL: 'https://thorrellt.github.io/room/',
+        gitURL: 'https://github.com/thorrellt/room',
+        takeaways: [
+            {
+                title: "React Transition Groups",
+                content: "To animate the sliding animation from one component to the next, I had to learn and implement CSSTransitions and learn how to manage them with my existing states."
+            },
+            {
+                title: "CSS Animations",
+                content: "In addition to the React Transition Groups, I used CSS animations to achieve the sliding effect. To achieve the desired outcome, I learned how the two interacted, which included slowing the animation down and observing how the DOM reacted to the exchange of components and animations."
+            },
+            {
+                title: "Responsive CSS Layouts",
+                content: "The responsive layout required using both media queries, and state management based on the window width. Combining the flex layouts and absolute positions allowed me to complete the design and sliding animation effect."
+            }],
+        stackIcons: [
+            {
+                title: "ReactJS",
+                className: "devicon-react-original",
+            },
+            {
+                title: "HTML 5",
+                className: "devicon-html5-plain",
+            },
+            {
+                title: "CSS 3",
+                className: "devicon-css3-plain",
+            },
+            {
+                title: "JavaScript",
+                className: "devicon-javascript-plain",
+            }
+        ]
+    },
+    {
         title1: "Order",
         title2: "Management API",
         type: "REST API",
-        description: "This is a basic Node.js RESTful API modeled after an order management system. This API handles GET, PATCH, PULL, & DELETE requests for Orders, Products, & Users. Data is stored in a MongoDB Atlas database.",
+        description: () => {
+            return (
+        <>This is a basic Node.js RESTful API modeled after an order management system. This API handles GET, PATCH, PULL, & DELETE requests for Orders, Products, & Users. Data is stored in a MongoDB Atlas database.</>
+        )},
         imgName: 'img-api.jpg',
         gitURL: 'https://github.com/thorrellt/care-corner',
         takeaways: [
@@ -115,5 +175,5 @@ export default [
             }
         ]
     },
-    
+
 ]

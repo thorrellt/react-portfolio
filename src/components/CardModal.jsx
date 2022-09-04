@@ -44,6 +44,7 @@ export default function CardModal(props) {
         )
     })
 
+    const projDescription = description()
 
     return (
         <Modal
@@ -62,7 +63,7 @@ export default function CardModal(props) {
                 <Row className='modal--stack'>
                     {iconElements}
                 </Row>
-                <p>{description}</p>
+                <p className='modal-desc'>{projDescription}</p>
                 <h5>Some Key Takeaways</h5>
                 <ul className='pe-5'>{takeawayListElements}</ul>
 
