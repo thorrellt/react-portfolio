@@ -8,7 +8,7 @@ Welcome to the codebase for my portfolio website [thorrellt.com]( https://thorre
 
 ## Key Takeaways
 
-**React:** I spent the end of July 2022 until the beginning of August 2022 learning React. This transition from my previous portfolio, which was HTML, CSS, and JS (located @ [thorrellt.github.io/thorrellt-portfolio](https://thorrellt.github.io/thorrellt-portfolio/) was a great opportunity to use my newly acquired skills to build a more sustainable portfolio.  
+**React:** I spent the end of July 2022 until the beginning of August 2022 learning React. This transition from my previous portfolio, which was HTML, CSS, and JS (located @ [github.com/thorrellt/thorrellt-portfolio](https://github.com/thorrellt/thorrellt-portfolio) was a great opportunity to use my newly acquired skills to build a more sustainable portfolio.  
 
 **Bootstrap/ React-Bootstrap:** I wanted to ensure this site was still responsive on all screen sizes. Based on my original design, and what I had learned from building the [MC 311 Tool](https://thorrellt.github.io/mc311-tool/), I decided Bootstrap would be a good fit to handle the layout. My research landed me on the React-Bootstrap package, and after some trial and error, and reading the documentation, I found the transition from Bootstrap-5 to React-Bootstrap to be fairly seamless. 
 
