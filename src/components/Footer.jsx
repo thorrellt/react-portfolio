@@ -14,7 +14,7 @@ function Footer(props) {
                   title="Home"></i>
             </a>
             <p className='mb-0 ms-3'>Written by Thorrell Turner. View the code <a
-                href='https://github.com/thorrellt/react-portfolio'
+                href='https://github.com/thorrellt/thorrellt-react-portfolio'
                 target="_blank"
                 rel="noopener noreferrer">
                 here at my GitHub.
