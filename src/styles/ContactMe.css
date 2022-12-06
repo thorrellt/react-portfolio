@@ -1,8 +1,12 @@
+#ContactMe h2 {
+  font-weight: 900;
+}
+
 #ContactMe .form-label {
-	font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 700;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
 }
 
 #ContactMe #rc-anchor-container {
-    background: var(--neutral-black);
+  background: var(--neutral-black);
 }
