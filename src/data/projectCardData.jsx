@@ -2,6 +2,54 @@ const ccIcons = ["devicon-android-plain", "devicon-java-plain", "devicon-git-pla
 
 export default [
     {
+        title1: "Pay",
+        title2: "API",
+        type: "Website",
+        description: () => {
+            return (
+                <>The PayAPI website is the home for a fictional web API based on a design from <a 
+                href='https://www.frontendmentor.io/challenges/payapi-multipage-website-FDLR1Y11e'
+                target="_blank"
+                rel="noopener noreferrer"
+                title="www.frontendmentor.io/challenges/payapi-multipage-website-FDLR1Y11e"> frontendmentor.com.</a>This multipage site is single React.js application that utilized React Router to change pages.</>
+            )
+        },
+        imgName: 'img-payapi.jpg',
+        liveURL: 'https://thorrellt.github.io/PayAPI/',
+        gitURL: 'https://github.com/thorrellt/PayAPI',
+        takeaways: [
+            {
+                title: "React Router",
+                content: "I learned React Router v6 and implemented it to manage the navigation of the multiple pages on this site."
+            },
+            {
+                title: "Form with Controlled Components",
+                content: "The form on the Contacts page was built with controlled components that use one state object as the single source of truth."
+            },
+            {
+                title: "Shared & Conditionally Rendered Components",
+                content: "To increase re-usability, there are some shared components, assets, and layout choices that are conditionally rendered where needed."
+            }],
+        stackIcons: [
+            {
+                title: "ReactJS",
+                className: "devicon-react-original",
+            },
+            {
+                title: "HTML 5",
+                className: "devicon-html5-plain",
+            },
+            {
+                title: "CSS 3",
+                className: "devicon-css3-plain",
+            },
+            {
+                title: "JavaScript",
+                className: "devicon-javascript-plain",
+            }
+        ]
+    },
+    {
         title1: "Care",
         title2: "Corner",
         type: "Android Application",
@@ -35,7 +83,7 @@ export default [
                 className: "devicon-java-plain",
             },
             {
-                title: "Version Contro",
+                title: "Version Control",
                 className: "devicon-git-plain",
             },
             {
@@ -91,7 +139,7 @@ export default [
     {
         title1: "room",
         title2: "Furniture Store",
-        type: "Web Page",
+        type: "Website",
         description: () => {
             return (
                 <>The room webpage is the landing page for a fictional furniture store. The design is from 

@@ -16,7 +16,7 @@
     width: 100%;
     transform: translateY(calc(20px + 1em));
     transition: transform 0.3s;
-    --bs-bg-opacity: .4;
+    --bs-bg-opacity: .5;
 }
 
 #Projects .project--title {
