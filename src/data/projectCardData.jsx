@@ -9,7 +9,7 @@ export default [
   {
     title1: 'devjobs',
     title2: '',
-    type: 'Full-stack web app',
+    type: 'Full-stack Web App',
     description: () => {
       return (
         <>
@@ -20,10 +20,9 @@ export default [
             rel="noopener noreferrer"
             title="www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l"
           >
-            {' '}
-            frontendmentor.com.
+            frontendmentor.com.{' '}
           </a>
-          his multipage site is single React.js application that utilized React
+          This multipage site is single React.js application that utilized React
           Router dynamically generate the individual job pages. The back end API
           is built using node.js, expess, and MongoDB to serve the CRUD
           functions.
@@ -84,8 +83,7 @@ export default [
             rel="noopener noreferrer"
             title="www.frontendmentor.io/challenges/payapi-multipage-website-FDLR1Y11e"
           >
-            {' '}
-            frontendmentor.com.
+            frontendmentor.com.{' '}
           </a>
           This multipage site is single React.js application that utilized React
           Router to change pages.
@@ -339,6 +337,10 @@ export default [
       {
         title: 'JavaScript',
         className: 'devicon-javascript-plain',
+      },
+      {
+        title: 'Express',
+        className: 'devicon-express-original',
       },
       {
         title: 'MongoDB',
