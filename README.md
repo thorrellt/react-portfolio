@@ -24,7 +24,7 @@ Once project is pulled, enter the main folder location and run npm install to ad
   npm start
 ```
 
-When all the dependencies are installed, the command npm run dev will build and run the app on your local enviroment.
+When all the dependencies are installed, the command npm run dev will build and run the app on your local environment.
 
 ```bash
   npm run dev
