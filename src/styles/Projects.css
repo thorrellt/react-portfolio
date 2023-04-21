@@ -61,7 +61,5 @@
     #Projects .project--cards,
     #Projects .project--cards .col-12{
         padding-inline: 0 !important;
-      } {
-      padding-inline: 0 !important;
-    }  
+      } 
   }
